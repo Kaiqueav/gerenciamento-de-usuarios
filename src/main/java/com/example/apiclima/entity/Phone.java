@@ -1,6 +1,5 @@
 package com.example.apiclima.entity;
-
-import java.time.LocalDate;
+import com.example.apiclima.enums.PhoneType;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,11 +8,11 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @Builder
-@AllArgsConstructor
 @Data
-public class Person {
-    private String firstName;
-    private String lastName;
-    private int cpf;
-    private LocalDate birthDay;
+@AllArgsConstructor
+public class Phone {
+    private Long id;
+    private PhoneType type;
+    private String number;
+
 }
