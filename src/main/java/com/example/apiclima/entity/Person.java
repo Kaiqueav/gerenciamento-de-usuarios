@@ -3,7 +3,7 @@ package com.example.apiclima.entity;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import org.hibernate.mapping.List;
+
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
