@@ -1,9 +1,11 @@
 package com.example.apiclima.controller;
 import com.example.apiclima.dto.MessageResponseDTO;
-import com.example.apiclima.entity.Person;
+import com.example.apiclima.dto.request.PersonDTO;
+
 import com.example.apiclima.service.PersonService;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,8 +26,8 @@ public class PersonController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public MessageResponseDTO createPerson(@RequestBody Person person){
-        return personService.createPerson(person);
+    public MessageResponseDTO createPerson(@RequestBody @Validated PersonDTO personDTO){
+        return personService.createPerson(personDTO);
     }   
 
    
